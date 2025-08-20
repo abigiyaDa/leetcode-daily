@@ -3,9 +3,9 @@ class Solution:
         if numRows == 1:
             return s
         res = ""
-        
+        increment = (numRows-1)*2
         for r in range(numRows):
-            increment = (numRows-1)*2
+            
             for i in range(r,len(s),increment):
                 res += s[i]
                 exp = (i+increment)-(2*r)
