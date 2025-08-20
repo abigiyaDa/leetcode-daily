@@ -1,5 +1,6 @@
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
+        # used colliding pointers 
         left = 0
         right = int(math.sqrt(c))
         while left <= right :
