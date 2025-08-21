@@ -7,7 +7,7 @@ class Solution:
         start = 0
         while start<len(s):
             end = last_occurrence[s[start]]
-            j = start
+            j = start+1
 
             while j<=end:
                 end = max(end,last_occurrence[s[j]])
