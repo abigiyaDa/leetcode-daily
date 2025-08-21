@@ -1,19 +1,20 @@
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
-        last = {}
+        last_occurrence = {}
         for i in range(len(s)):
-            last[s[i]] = i
-        res = []
-        i = 0
-        while i<len(s):
-            x = last[s[i]]
-            j=i
-            while j<=x:
-                x = max(x,last[s[j]])
+            last_occurrence[s[i]] = i
+        partitions = []
+        start = 0
+        while start<len(s):
+            end = last_occurrence[s[start]]
+            j = start
+
+            while j<=end:
+                end = max(end,last_occurrence[s[j]])
                 j+=1
-            res.append(j-i)
-            i=j
-        return res
+            partitions.append(j-start)
+            start=j
+        return partitions
             
 
 
