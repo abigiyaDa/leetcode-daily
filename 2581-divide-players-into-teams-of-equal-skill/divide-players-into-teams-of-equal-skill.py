@@ -11,7 +11,7 @@ class Solution:
             x = skill[first] + skill[last]
             if x == products:
                 res += skill[first] * skill[last]
-                products = x
+                # products = x
             else:
                 return -1
             last-=1
