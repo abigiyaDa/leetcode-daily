@@ -1,16 +1,18 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        #2 pointer
-        r=len(height)-1
-        l=0
+        #2 pointer time = o(n)
+        left = 0
+        right = len(height)-1
         max_area = 0
-        while l<r:
-            h=min( height[l] , height[r])
-            w=r-l
+
+        while left < right:
+            h = min(height[left],height[right])
+            w = right-left
             max_area = max(max_area,h*w)
-            if height[l] > height[r]:
-                r-=1
+            if height[left] < height[right]:
+                left+=1
             else:
-                l+=1
+                right-=1
         return max_area
+
 
