@@ -1,9 +1,10 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
+        # Time Complexity: O(n²) space 0(1) if we dont count results
         nums.sort()
         i=0
         result = [] 
-        while i<len(nums)-2:
+        for i in range(len(nums) - 2):
             # Skip duplicates for i
             if i > 0 and nums[i] == nums[i - 1]:
                 i += 1
