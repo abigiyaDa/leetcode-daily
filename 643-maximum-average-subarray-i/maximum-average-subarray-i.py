@@ -9,7 +9,8 @@ class Solution:
         # output = (max_sum / k) * 1.00000
         # return output
 
-        window_sum = 0 
+        window_sum = 0
+        max_sum = float('-inf')
 
         for i in range(k):
             window_sum += nums[i]
@@ -24,5 +25,5 @@ class Solution:
             max_sum = max(max_sum,window_sum)
             left+=1
 
-        return (max_sum/k) * 1.00000
+        return max_sum/k
 
