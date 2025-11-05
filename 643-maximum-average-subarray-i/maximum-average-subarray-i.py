@@ -11,6 +11,7 @@ class Solution:
 
         window_sum = 0
         max_sum = float('-inf')
+        # float('-inf') is the safest default starting point when looking for a maximum of unknown numbers. started with max_sum = 0 and num = [-5, -2, -9] but the max num is -2 not 0(our default)
 
         for i in range(k):
             window_sum += nums[i]
