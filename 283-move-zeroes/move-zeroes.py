@@ -1,11 +1,12 @@
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        # in-place- using 2 pointers
-        left = 0
-        right = 0
-        while right < len(nums):
-            if nums[right] != 0:
-                nums[left], nums[right] = nums[right] , nums[left]
-                left += 1    
-            right += 1
-        return nums        
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        holder, seeker = 0,0
+        while seeker < len(nums):
+            if nums[seeker] != 0:
+                nums[holder],nums[seeker] = nums[seeker],nums[holder]
+                holder +=1
+            seeker+=1
+        # return nums
