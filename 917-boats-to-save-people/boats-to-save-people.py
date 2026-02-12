@@ -5,13 +5,9 @@ class Solution:
         count = 0
         while first <= last:
             if people[first] + people[last] <=limit:
-                count +=1
                 first +=1
                 last-=1
-            elif people[first] < people[last]:
-                count +=1 
-                last -=1
-            else:
-                count += 1
-                first +=1 
+            else: 
+                last -=1 
+            count +=1
         return count  
