@@ -6,7 +6,7 @@ class Solution:
         res = 0
 
         while first < last :
-            if (skill[first] + skill[last]) != x:
+            if skill[first] + skill[last] != x:
                 return -1
             res += (skill[first] * skill[last])
             first +=1
