@@ -1,5 +1,6 @@
 class Solution:
     def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
+        # O(m + p log p) time, O(p) space
         checker = {}
         for i in matches:
             checker[i[0]] = checker.get(i[0],0)
