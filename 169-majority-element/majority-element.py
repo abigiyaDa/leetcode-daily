@@ -1,19 +1,9 @@
+from collections import Counter
 class Solution:
-    def majorityElement(self, nums: List[int]) -> int: 
-        #Boyer-Moore Voting Algorithm 
-        count = 0
-        x=0
-        for i in range(len(nums)):
-            if count == 0:
-                x = nums[i]
-            if nums[i] == x:
-                count += 1
-            else :
-                count-=1
-        return x
-
-
-        
-        
-        
+    def majorityElement(self, nums: List[int]) -> int:
+        checker = Counter(nums)
+        atleast = len(nums)//2
+        for num, count in checker.items():
+            if count >atleast:
+                return num
         
