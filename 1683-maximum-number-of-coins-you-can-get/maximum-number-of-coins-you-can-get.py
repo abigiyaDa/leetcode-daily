@@ -1,11 +1,9 @@
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
-        n = len(piles)//3 #We’ll play n rounds (each round consumes 3 piles).
+        n = len(piles)
+        round = n//3
         res = 0
-        piles.sort(reverse=True)
-
-        for i in range(1,2*n,2):
+        piles.sort()
+        for i in range(n-2,round-1,-2):
             res += piles[i]
         return res
-
-
