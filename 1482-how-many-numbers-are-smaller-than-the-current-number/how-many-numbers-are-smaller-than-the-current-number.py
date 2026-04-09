@@ -7,7 +7,7 @@ class Solution:
             idx = nums_sorted.index(i)
             res.append(idx)
         return res
-        # # optimal
+        # # optimal - Time: O(n log n) Space: O(n)
         # rank = {}
         # nums_sorted = sorted(nums)
         # for idx,num in enumerate(nums_sorted):
