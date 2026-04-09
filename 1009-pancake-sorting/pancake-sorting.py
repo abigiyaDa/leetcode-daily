@@ -21,8 +21,3 @@ class Solution:
             res.append(size)
         
         return res
-
-
-            
-
-        
