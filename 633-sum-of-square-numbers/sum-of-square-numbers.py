@@ -1,17 +1,15 @@
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
-        # used colliding pointers 
+        # reason (a+b)2=a2+b2+2ab
         left = 0
         right = int(math.sqrt(c))
-        while left <= right :
-            a = left*left
-            b = right*right
-            if c == (a+b):
+        while left<=right:
+            current = left*left + right*right
+            if c == current:
                 return True
-            elif c < (a+b):
-                right -=1
+            elif current < c:
+                left+=1
             else:
-                left += 1
+                right -= 1
         return False
-
         
