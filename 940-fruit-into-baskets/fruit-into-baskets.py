@@ -1,7 +1,7 @@
-from collections import Counter
+from collections import defaultdict
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
-        count = Counter()
+        count = defaultdict(int)
         left = 0
         max_len =  0
         for right in range(len(fruits)):
